@@ -56,11 +56,17 @@ This is where raw data enters the warehouse pipeline.
 Examples of source systems:
 
 OLTP Databases (MySQL, Postgres)
+
 CRM systems (Salesforce)
+
 ERP systems
+
 Flat files (CSV)
+
 APIs
+
 Streaming systems (Kafka)
+
 Logs
 
 # 2️⃣ Middle Tier — Data Warehouse Layer (Core Storage + OLAP Engine)
@@ -69,19 +75,21 @@ This is the heart of the architecture
 It Stores:
 
 Cleaned
+
 Integrated
+
 Historical
+
 Analytics-ready data
 
 # 3️⃣ Top Tier — Presentation Layer (BI / Analytics Layer)
 This is where business users interact with data
+
 Examples:
 
 Tableau
+
 Power BI
-
-
-
 
 
 
