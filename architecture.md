@@ -11,9 +11,13 @@ Organizations typically have many systems:
 | Website        | clickstream logs |
 
 If management asks:
+
 “Show total revenue by customer region for last 5 years”
+
 You cannot efficiently query multiple OLTP systems directly ❌
+
 So we: Extract → Transform → Load → Store in Data Warehouse
+
 Now analytics becomes fast and consistent ✅
 
 # 🧱 Core Characteristics of a Data Warehouse
