@@ -29,7 +29,9 @@ System A → gender = M/F
 System B → gender = Male/Female
 -- Warehouse stores:
 gender = Male/Female
+
 3️⃣ Time-Variant: Stores historical data
+
 4️⃣ Non-Volatile: Data is not frequently updated or deleted. It will be INSERT and SELECT.
 
 
