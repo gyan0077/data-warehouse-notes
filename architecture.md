@@ -16,7 +16,13 @@ So we: Extract → Transform → Load → Store in Data Warehouse
 Now analytics becomes fast and consistent ✅
 
 # 🧱 Core Characteristics of a Data Warehouse
-1️⃣ Subject-Oriented: 
+1️⃣ Subject-Oriented: Data is organized around business subjects:
+Ex: 
+Customers
+Sales
+Products
+Revenue
+
 2️⃣ Integrated: Data comes from multiple sources but stored in consistent format
 -- Source systems:
 System A → gender = M/F
