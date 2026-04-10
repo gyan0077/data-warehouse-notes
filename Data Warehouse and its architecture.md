@@ -42,6 +42,20 @@ gender = Male/Female
 4️⃣ Non-Volatile: Data is not frequently updated or deleted. It will be INSERT and SELECT.
 
 
+# 📦 Types of Data Warehouse
+1️⃣ Enterprise Data Warehouse (EDW)
+
+2️⃣ DataMart
+
+A Data Mart is a subject-oriented subset of a Data Warehouse designed for a specific department or business function.
+
+3️⃣ Operational Data Store (ODS)
+
+
+
+
+
+
 # 🏗️ Data Warehouse 3-Tier Architecture
 The Data Warehouse(3-tier) Architecture explains how data flows from **source systems** → **warehouse** → **analytics tools** in a structured and scalable way.
 
@@ -90,6 +104,7 @@ Examples:
 Tableau
 
 Power BI
+
 
 
 
