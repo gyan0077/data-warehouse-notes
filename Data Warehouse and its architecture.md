@@ -42,6 +42,51 @@ gender = Male/Female
 4️⃣ Non-Volatile: Data is not frequently updated or deleted. It will be INSERT and SELECT.
 
 
+# 🏗️ Data Warehouse 3-Tier Architecture
+The Data Warehouse(3-tier) Architecture explains how data flows from **source systems** → **warehouse** → **analytics tools** in a structured and scalable way.
+
+# 🧱 Overview of the 3 Layers
+Top Tier        → BI Tools / Reporting Layer
+Middle Tier     → OLAP Server / Data Warehouse Storage
+Bottom Tier     → Source Systems + ETL + Staging
+
+# 1️⃣ Bottom Tier — Data Source Layer (Ingestion + Staging Layer)
+This is where raw data enters the warehouse pipeline.
+
+Examples of source systems:
+
+OLTP Databases (MySQL, Postgres)
+CRM systems (Salesforce)
+ERP systems
+Flat files (CSV)
+APIs
+Streaming systems (Kafka)
+Logs
+
+# 2️⃣ Middle Tier — Data Warehouse Layer (Core Storage + OLAP Engine)
+This is the heart of the architecture
+
+It Stores:
+
+Cleaned
+Integrated
+Historical
+Analytics-ready data
+
+# 3️⃣ Top Tier — Presentation Layer (BI / Analytics Layer)
+This is where business users interact with data
+Examples:
+
+Tableau
+Power BI
+
+
+
+
+
+
+
+
 
 
 
