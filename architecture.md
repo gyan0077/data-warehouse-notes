@@ -9,6 +9,7 @@ Organizations typically have many systems:
 | ERP            | orders           |
 | Payment system | transactions     |
 | Website        | clickstream logs |
+
 If management asks:
 “Show total revenue by customer region for last 5 years”
 You cannot efficiently query multiple OLTP systems directly ❌
