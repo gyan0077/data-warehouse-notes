@@ -29,10 +29,12 @@ Products
 Revenue
 
 2️⃣ Integrated: Data comes from multiple sources but stored in consistent format
--- Source systems:
+
+Source systems:
 System A → gender = M/F
 System B → gender = Male/Female
--- Warehouse stores:
+
+Warehouse stores:
 gender = Male/Female
 
 3️⃣ Time-Variant: Stores historical data
