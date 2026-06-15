@@ -45,11 +45,9 @@ Suppose the bank wants to analyze customer transactions.
 # 📦  Structure
 
 
-                Dim_Customer
-                     |
-                     |
-Dim_Date ---- Fact_Transaction ---- Dim_Branch
-
+              Dim_Customer
+                  |
+Dim_Date - Fact_Transaction - Dim_Branch
 
 
 
@@ -134,12 +132,10 @@ Instead of storing everything in Customer Dimension:
                 Dim_Customer
                         |
                         |
-Fact_Transaction ---- Dim_Branch
+   Fact_Transaction - Dim_Branch
                         |
                         |
                     Dim_Date
-
-
 
 
 
