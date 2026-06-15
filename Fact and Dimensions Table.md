@@ -1,10 +1,12 @@
-# 📦 Fact Table ====>
+# 📦 Fact Table
 
 A Fact Table stores business events or transactions and contains measurable metrics (facts)
+
 Facts are typically numeric values that can be aggregated (SUM, AVG, COUNT, MIN, MAX).
+
 A Fact Table sits at the center of a Star Schema and is connected to multiple Dimension Tables through foreign keys.
 
-# For example, in a banking transaction warehouse, Transaction Amount is stored in the Fact Table, while Customer, Branch, Account, and Date details are stored in Dimension Tables. Facts are used for calculations and aggregations, whereas dimensions are used for filtering, grouping, and reporting.
+For example, in a banking transaction warehouse, Transaction Amount is stored in the Fact Table, while Customer, Branch, Account, and Date details are stored in Dimension Tables. Facts are used for calculations and aggregations, whereas dimensions are used for filtering, grouping, and reporting.
 
 
 
@@ -43,13 +45,18 @@ These values can be aggregated.
 | Deposit Fact     | Deposit Amount, Balance        |
 
 
-# 📦 Dimension Table ====>
+# 📦 Dimension Table
 A Dimension Table stores descriptive information (context) about business entities.
+
 Dimensions answer questions such as:
 Who?
+
 What?
+
 When?
+
 Where?
+
 Which?
 
 # Banking Example
@@ -61,12 +68,15 @@ Which?
 | 102          | C1002       | Priya Patel   | Female | Pune   |
 
 This table describes the customer.
-Branch Dimension
+
+# Branch Dimension
+
 | Branch_Key | Branch_Code | Branch_Name | State       |
 | ---------- | ----------- | ----------- | ----------- |
 | 21         | BR001       | Nagpur Main | Maharashtra |
 
 This table describes branch information.
+
 # Characteristics of Dimension Table
 
 | Characteristic                  | Description                   |
