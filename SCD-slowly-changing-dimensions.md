@@ -173,6 +173,159 @@ History is required for regulatory and analytical reporting.
 
 # SCD Type 3 – Limited History
 
+Store current value and previous value in the same row.
+
+'
+SCD Type 3 stores limited history by adding additional columns such as Previous_City and Current_City.
+'
+
+# Example
+
+| Customer_ID | Current_City | Previous_City |
+| ----------- | ------------ | ------------- |
+| C1001       | Mumbai       | Pune          |
+
+If customer moves again:
+
+| Customer_ID | Current_City | Previous_City |
+| ----------- | ------------ | ------------- |
+| C1001       | Delhi        | Mumbai        |
+
+Pune is Lost
+
+
+# Characteristics
+
+| Feature       | Value   |
+| ------------- | ------- |
+| History Depth | Limited |
+| Storage       | Low     |
+| Complexity    | Low     |
+
+
+# SCD Type 4 – History Table
+
+Current data and historical data are stored separately.
+
+# Current Customer Table
+
+| Customer_ID | Customer_Name | City   |
+| ----------- | ------------- | ------ |
+| C1001       | Amit Sharma   | Mumbai |
+
+
+# Customer History Table
+
+| Customer_ID | Customer_Name | City | Change_Date |
+| ----------- | ------------- | ---- | ----------- |
+| C1001       | Amit Sharma   | Pune | 2024-01-01  |
+
+
+# Advantages
+
+| Advantage                   |
+| --------------------------- |
+| Current table remains small |
+| Historical data separated   |
+
+
+
+
+# SCD Type 6 (1+2+3 Hybrid)
+
+Combination of:
+
+Type 1
+
+Type 2
+
+Type 3
+
+# Maintains:
+
+Current value
+
+Previous value
+
+Full history
+
+
+# Example
+
+| Customer_Key | Customer_ID | Current_City | Previous_City | Start_Date | End_Date   |
+| ------------ | ----------- | ------------ | ------------- | ---------- | ---------- |
+| 101          | C1001       | Pune         | NULL          | 2024-01-01 | 2024-06-30 |
+| 102          | C1001       | Mumbai       | Pune          | 2024-07-01 | NULL       |
+
+Rarely implemented but commonly asked theoretically.
+
+
+# SCD Type Comparison
+
+| Feature           | Type 0            | Type 1      | Type 2      | Type 3  | Type 4        |
+| ----------------- | ----------------- | ----------- | ----------- | ------- | ------------- |
+| History Preserved | No Change Allowed | No          | Full        | Limited | Full          |
+| New Row Inserted  | No                | No          | Yes         | No      | History Table |
+| Storage Usage     | Low               | Low         | High        | Medium  | High          |
+| Complexity        | Low               | Low         | Medium      | Medium  | Medium        |
+| Most Used         | Rare              | Very Common | Very Common | Rare    | Rare          |
+
+
+# How Fact Tables Work with SCD Type 2
+Suppose:  Customer lives in Pune
+
+| Customer_Key | Customer_ID | City |
+| ------------ | ----------- | ---- |
+| 101          | C1001       | Pune |
+
+
+# Transaction occurs:
+
+| Transaction_ID | Customer_Key | Amount |
+| -------------- | ------------ | ------ |
+| T001           | 101          | 10000  |
+
+
+# Customer moves to Mumbai.
+
+# New dimension row:
+
+| Customer_Key | Customer_ID | City   |
+| ------------ | ----------- | ------ |
+| 102          | C1001       | Mumbai |
+
+
+# New transaction:
+
+| Transaction_ID | Customer_Key | Amount |
+| -------------- | ------------ | ------ |
+| T002           | 102          | 5000   |
+
+
+# Result
+
+Historical reports remain accurate because transactions point to the correct version of the customer.
+
+# Interview Answer (2-Minute Version)
+
+Slowly Changing Dimensions are techniques used to manage changes in dimension data over time.
+
+SCD Type 1 overwrites existing values and does not maintain history.
+SCD Type 2 preserves complete history by expiring old records and inserting new records with new surrogate keys. 
+
+SCD Type 3 maintains limited history using additional columns. 
+
+In banking projects, SCD Type 2 is most commonly used because historical customer information is required for regulatory reporting, auditing, and trend analysis.
+
+
+
+
+
+
+
+
+
+
 
 
 
